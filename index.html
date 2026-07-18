@@ -1,7 +1,233 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Currículum Vitae — Eulemis Hernández, Desarrollador Senior de Software | Arquitecto Backend | Especialista SaaS & Cloud" />
+  <title>Eulemis Hernández — Desarrollador Senior de Software CV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+  <header class="toolbar no-print" role="banner">
+    <div class="toolbar__brand" data-i18n="brand">Eulemis Hernández · CV</div>
+    <div class="toolbar__actions">
+      <div class="lang-switch" role="group" aria-label="Language / Idioma">
+        <button type="button" class="lang-btn is-active" data-lang="es" aria-pressed="true">ES</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button type="button" class="btn btn--ghost" id="btn-print" data-i18n="btnPrint" data-i18n-aria="btnPrint">Imprimir</button>
+      <button type="button" class="btn btn--ats" id="btn-pdf-ats" data-i18n="btnPdfAts" data-i18n-aria="btnPdfAts" title="Descarga TXT + PDF una columna para ATS">PDF ATS</button>
+      <button type="button" class="btn btn--primary" id="btn-pdf" data-i18n="btnPdf" data-i18n-aria="btnPdf">Descargar PDF</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <article class="cv" id="cv" aria-label="Curriculum Vitae">
+      <aside class="cv__sidebar">
+        <div class="photo-wrap">
+          <img
+            src="assets/eulemis-hernandez.png"
+            alt="Foto de Eulemis Hernández"
+            width="132"
+            height="132"
+            data-i18n-alt="photoAlt"
+          />
+        </div>
+
+        <section class="sidebar-block" aria-labelledby="contact-title">
+          <h2 class="sidebar-title" id="contact-title" data-i18n="contact">Contacto</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="label" data-i18n="locationLabel">Ubicación</span>
+              <span data-i18n="location">Miranda, Venezuela</span>
+            </li>
+            <li>
+              <span class="label" data-i18n="emailLabel">Correo</span>
+              <a href="mailto:eulemisalfredo@gmail.com">eulemisalfredo@gmail.com</a>
+            </li>
+            <li>
+              <span class="label" data-i18n="phoneLabel">Teléfono</span>
+              <a href="tel:+584120169750">+58 412 016-9750</a>
+            </li>
+            <li>
+              <span class="label" data-i18n="linkedinLabel">LinkedIn</span>
+              <a href="https://linkedin.com/in/eulemis-hernandez" target="_blank" rel="noopener noreferrer">linkedin.com/in/eulemis-hernandez</a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="sidebar-block" aria-labelledby="tech-title">
+          <h2 class="sidebar-title" id="tech-title" data-i18n="coreStack">Stack principal</h2>
+
+          <div class="skill-group">
+            <h4 data-i18n="backend">Backend</h4>
+            <p data-i18n="backendSkills">Laravel 9/10/11 · PHP · Symfony · APIs REST · Sanctum · Reverb · SOLID · Service Layer / DTOs</p>
+          </div>
+          <div class="skill-group">
+            <h4 data-i18n="frontend">Frontend</h4>
+            <p data-i18n="frontendSkills">React 18 · TypeScript · Vue.js · AngularJS · Tailwind · Vite · PWA · React Native / Expo</p>
+          </div>
+          <div class="skill-group">
+            <h4 data-i18n="databases">Bases de datos</h4>
+            <p data-i18n="dbSkills">MySQL · Redis · SQLite · IndexedDB / Dexie · Optimización SQL · Indexación · Lazy Loading</p>
+          </div>
+          <div class="skill-group">
+            <h4 data-i18n="cloud">Cloud y DevOps</h4>
+            <p data-i18n="cloudSkills">AWS (IVS, MediaConvert, S3, CloudFront) · DigitalOcean · Linux · Nginx / Apache · Git · CI/CD</p>
+          </div>
+          <div class="skill-group">
+            <h4 data-i18n="payments">Pagos</h4>
+            <p data-i18n="paymentSkills">Stripe · PayPal · MercadoPago</p>
+          </div>
+        </section>
+
+        <section class="sidebar-block" aria-labelledby="strengths-title">
+          <h2 class="sidebar-title" id="strengths-title" data-i18n="strengths">Fortalezas</h2>
+          <ul class="chip-list">
+            <li data-i18n="strength1">Arquitectura SaaS y Multi-Tenant</li>
+            <li data-i18n="strength2">Backend (Laravel)</li>
+            <li data-i18n="strength3">React y Full Stack</li>
+            <li data-i18n="strength4">Infraestructura Cloud (AWS)</li>
+            <li data-i18n="strength5">Clean Architecture y SOLID</li>
+            <li data-i18n="strength6">Optimización SQL</li>
+            <li data-i18n="strength7">Offline-First / PWA</li>
+            <li data-i18n="strength8">Tiempo real (WebSockets)</li>
+            <li data-i18n="strength9">Móvil (React Native)</li>
+            <li data-i18n="strength10">Integración de pasarelas de pago</li>
+            <li data-i18n="strength11">Liderazgo técnico</li>
+            <li data-i18n="strength12">Diseño de software escalable</li>
+          </ul>
+        </section>
+
+        <section class="sidebar-block" aria-labelledby="lang-title">
+          <h2 class="sidebar-title" id="lang-title" data-i18n="languages">Idiomas</h2>
+          <p class="lang" data-i18n="languageValue">Español — Nativo</p>
+        </section>
+      </aside>
+
+      <div class="cv__main">
+        <header class="cv-header">
+          <h1>Eulemis Hernández</h1>
+          <p class="headline" data-i18n="headline">Desarrollador Senior de Software · Arquitecto Backend · Especialista SaaS &amp; Cloud</p>
+        </header>
+
+        <section class="section" aria-labelledby="profile-title">
+          <h2 class="section-title" id="profile-title" data-i18n="profileTitle">Perfil profesional</h2>
+          <p class="profile-text" data-i18n="profile">
+            Desarrollador Senior de Software con más de 10 años de experiencia diseñando, desarrollando y desplegando soluciones escalables para empresas privadas, entidades de gobierno y plataformas SaaS. Especializado en arquitectura Backend con Laravel, aplicaciones Full Stack con React, infraestructura Cloud (AWS y DigitalOcean), sistemas Multi-Tenant, aplicaciones Offline-First y optimización de bases de datos de alto volumen. Trayectoria comprobada liderando proyectos desde la arquitectura hasta producción en comercio, educación, gobierno, deporte y automatización de negocios. Experto en Clean Architecture, alto rendimiento, escalabilidad y calidad de código.
+          </p>
+        </section>
+
+        <section class="section" aria-labelledby="exp-title">
+          <h2 class="section-title" id="exp-title" data-i18n="expTitle">Experiencia profesional</h2>
+
+          <article class="job">
+            <div class="job__head">
+              <h3 class="job__role" data-i18n="job1Role">Cofundador y Desarrollador Senior de Software</h3>
+              <span class="job__dates" data-i18n="job1Dates">2024 – Actualidad</span>
+            </div>
+            <p class="job__meta" data-i18n="job1Company">Venta Simplify</p>
+            <ul>
+              <li data-i18n-html="job1_1">Diseñé y desarrollé una plataforma SaaS Multi-Tenant de facturación, inventario y punto de venta orientada a PYMES.</li>
+              <li data-i18n-html="job1_2">Arquitecturé un sistema Multi-Tenant con bases de datos aisladas usando <strong>Stancl Tenancy</strong>.</li>
+              <li data-i18n-html="job1_3">Aseguré APIs REST escalables con <strong>Laravel Sanctum</strong>.</li>
+              <li data-i18n-html="job1_4">Desarrollé una <strong>PWA Offline-First</strong> con IndexedDB (Dexie.js) y sincronización inteligente.</li>
+              <li data-i18n-html="job1_5">Implementé control de conflictos con claves de idempotencia.</li>
+              <li data-i18n-html="job1_6">Construí un motor de precios automatizado basado en la tasa oficial del BCV.</li>
+              <li data-i18n-html="job1_7">Arquitecturé soporte multi-sucursal y multi-almacén con escalado horizontal. Plataforma en producción con clientes comerciales.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job__head">
+              <h3 class="job__role" data-i18n="job2Role">Desarrollador Senior Full Stack y DevOps</h3>
+              <span class="job__dates" data-i18n="job2Dates">2024 – 2026</span>
+            </div>
+            <p class="job__meta" data-i18n="job2Company">ViveTuJuego</p>
+            <ul>
+              <li data-i18n-html="job2_1">Desarrollé una plataforma SaaS de gestión deportiva, streaming en vivo y monetización de contenido.</li>
+              <li data-i18n-html="job2_2">Construí arquitectura Multi-Tenant con <strong>Laravel 11</strong>.</li>
+              <li data-i18n-html="job2_3">Integré <strong>Amazon IVS</strong> para streaming en vivo y <strong>AWS MediaConvert</strong> para transcodificación automatizada.</li>
+              <li data-i18n-html="job2_4">Gestioné distribución de medios con <strong>CloudFront</strong> y <strong>S3</strong>; pagos con <strong>Stripe</strong>.</li>
+              <li data-i18n-html="job2_5">Implementé marcadores en tiempo real con <strong>Laravel Reverb</strong>.</li>
+              <li data-i18n-html="job2_6">Desarrollé la app móvil con <strong>React Native (Expo)</strong> y sincronización offline con <strong>SQLite</strong>. Desplegado en producción.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job__head">
+              <h3 class="job__role" data-i18n="job3Role">Desarrollador Senior Full Stack</h3>
+              <span class="job__dates" data-i18n="job3Dates">2019 – 2023</span>
+            </div>
+            <p class="job__meta" data-i18n="job3Company">CollegeOne LLC</p>
+            <ul>
+              <li data-i18n-html="job3_1">Desarrollé y mantuve módulos empresariales para una plataforma educativa internacional.</li>
+              <li data-i18n-html="job3_2">Construí módulos Backend con <strong>Laravel</strong> y APIs REST; dashboards interactivos con <strong>Vue.js</strong>.</li>
+              <li data-i18n-html="job3_3">Integré sistemas externos, redes sociales internas y pasarelas de pago internacionales.</li>
+              <li data-i18n-html="job3_4">Colaboración remota con equipos globales.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job__head">
+              <h3 class="job__role" data-i18n="job4Role">Desarrollador Senior Backend</h3>
+              <span class="job__dates" data-i18n="job4Dates">2017 – 2019</span>
+            </div>
+            <p class="job__meta" data-i18n="job4Company">CONAPDIS (Ente del Gobierno Nacional)</p>
+            <ul>
+              <li data-i18n-html="job4_1">Optimicé el ecosistema tecnológico nacional para la gestión de personas con discapacidad.</li>
+              <li data-i18n-html="job4_2">Migré sistemas legacy a un stack moderno con <strong>Laravel</strong> y arquitectura de API centralizada.</li>
+              <li data-i18n-html="job4_3">Optimicé consultas SQL en bases de datos con más de <strong>500.000 registros</strong>.</li>
+              <li data-i18n-html="job4_4">Implementé Lazy Loading e indexación avanzada con mejoras significativas de rendimiento.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job__head">
+              <h3 class="job__role" data-i18n="job5Role">Desarrollador Senior Backend</h3>
+              <span class="job__dates" data-i18n="job5Dates">2015 – 2017</span>
+            </div>
+            <p class="job__meta" data-i18n="job5Company">Centro Juvenil Don Bosco</p>
+            <ul>
+              <li data-i18n-html="job5_1">Desarrollé un sistema de control de asistencia y eventos con refactorización completa bajo principios <strong>SOLID</strong>.</li>
+              <li data-i18n-html="job5_2">Construí APIs seguras con <strong>Laravel Sanctum</strong>; integré dispositivos <strong>NFC</strong> y boletos <strong>QR</strong> masivos.</li>
+              <li data-i18n-html="job5_3">Automaticé cargas de trabajo con Jobs y Queues.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section" aria-labelledby="edu-title">
+          <h2 class="section-title" id="edu-title" data-i18n="eduTitle">Educación y certificaciones</h2>
+
+          <div class="edu">
+            <h3>Universidad Nacional Experimental Simón Rodríguez (UNESR)</h3>
+            <p class="edu-meta" data-i18n="eduDegree">
+              Licenciado en Administración — Mención Informática · 2003 – 2008
+            </p>
+          </div>
+
+          <div class="edu">
+            <h3 data-i18n="certsTitle">Certificaciones</h3>
+            <ul class="certs">
+              <li data-i18n-html="cert1"><strong>IBM Advanced Career Education:</strong> Developer Applications e-Business</li>
+              <li data-i18n-html="cert2">
+                <strong>Styde (formación especializada):</strong>
+                Patrones de diseño con PHP · Eloquent ORM y optimización · Vue.js, Livewire y WebSockets ·
+                Programación orientada a objetos · Testing con Vue.js y Git
+              </li>
+            </ul>
+          </div>
+        </section>
+
+      </div>
+    </article>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
