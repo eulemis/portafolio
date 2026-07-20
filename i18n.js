@@ -4,9 +4,9 @@
  */
 window.CV_I18N = {
   en: {
-    docTitle: "Eulemis Hernández — Senior Software Developer CV",
+    docTitle: "Eulemis Hernández — Senior Software Engineer CV",
     docDescription:
-      "Curriculum Vitae — Eulemis Hernández, Senior Software Developer | Backend Architect | SaaS & Cloud Specialist",
+      "Curriculum Vitae — Eulemis Hernández, Senior Software Engineer | Backend Architect | SaaS & Cloud Specialist",
     brand: "Eulemis Hernández · CV",
     btnPrint: "Print",
     btnPdf: "Download PDF",
@@ -18,6 +18,7 @@ window.CV_I18N = {
     email: "eulemisalfredo@gmail.com",
     phone: "+58 412 016-9750",
     linkedin: "linkedin.com/in/eulemis-hernandez",
+    github: "github.com/eulemis",
     eduSchool: "Universidad Nacional Experimental Simón Rodríguez (UNESR)",
     photoAlt: "Portrait of Eulemis Hernández",
     contact: "Contact",
@@ -26,6 +27,22 @@ window.CV_I18N = {
     emailLabel: "Email",
     phoneLabel: "Phone",
     linkedinLabel: "LinkedIn",
+    highlightsTitle: "Featured profile",
+    stat1Value: "10+",
+    stat1Label: "years of experience",
+    stat2Value: "5+",
+    stat2Label: "SaaS platforms",
+    stat3Value: "500K+",
+    stat3Label: "optimized records",
+    stat4Value: "100%",
+    stat4Label: "quality focus",
+    keySkills: "Key skills",
+    skill1: "Laravel / PHP",
+    skill2: "React / TypeScript",
+    skill3: "SaaS Architecture",
+    skill4: "Cloud / AWS",
+    skill5: "MySQL / Redis",
+    skill6: "DevOps / Docker",
     coreStack: "Core Stack",
     backend: "Backend",
     frontend: "Frontend",
@@ -55,79 +72,95 @@ window.CV_I18N = {
     strength11: "Technical Leadership",
     strength12: "Scalable Software Design",
     languages: "Languages",
+    languageName: "Spanish",
+    languageLevel: "Native",
     languageValue: "Spanish — Native",
+    headlineShort: "Senior Software Engineer",
     headline:
-      "Senior Software Developer · Backend Architect · SaaS & Cloud Specialist",
-    profileTitle: "Professional Profile",
+      "Senior Software Engineer · Backend Architect · SaaS & Cloud Specialist",
+    rolesLine: "Backend Specialist · SaaS Architect · Cloud & DevOps · Full Stack",
+    profileTitle: "Professional summary",
     profile:
-      "Senior Software Developer with over 10 years of experience designing, developing, and deploying scalable software solutions for private enterprises, government agencies, and SaaS platforms. Specialized in Backend architecture using Laravel, Full Stack applications with React, Cloud infrastructure (AWS & DigitalOcean), Multi-Tenant systems, Offline-First applications, and high-volume database optimization. Proven track record of leading projects from architecture to production across commerce, education, government, sports, and business automation. Expert in Clean Architecture, high performance, scalability, and code quality.",
-    expTitle: "Professional Experience",
-    job1Role: "Co-Founder & Senior Software Developer",
+      "Senior Software Engineer with over 10 years of experience designing, developing, and deploying scalable software solutions for private enterprises, government agencies, and SaaS platforms. Specialized in Backend architecture using Laravel, Full Stack applications with React, Cloud infrastructure (AWS & DigitalOcean), Multi-Tenant systems, Offline-First applications, and high-volume database optimization. Proven track record of leading projects from architecture to production across commerce, education, government, sports, and business automation. Expert in Clean Architecture, high performance, scalability, and code quality.",
+    profileP1:
+      "Senior Software Engineer with over 10 years of experience designing, developing, and deploying scalable solutions for private enterprises, government agencies, and SaaS platforms.",
+    profileP2:
+      "Specialized in Backend architecture with Laravel, Full Stack apps with React, Cloud infrastructure (AWS & DigitalOcean), Multi-Tenant systems, Offline-First applications, and high-volume database optimization. Expert in Clean Architecture, performance, scalability, and code quality.",
+    expTitle: "Professional experience",
+    job1Role: "Co-Founder & Senior Software Engineer",
     job1Dates: "2024 – Present",
     job1Company: "Venta Simplify",
+    job1Product: "Multi-Tenant SaaS for billing, inventory, and point of sale",
     job1_1:
-      "Designed and developed a Multi-Tenant SaaS platform for billing, inventory, and point-of-sale tailored for SMBs.",
+      "Designed and developed a Multi-Tenant SaaS platform tailored for SMBs.",
     job1_2:
-      "Architected a Multi-Tenant system with isolated databases using <strong>Stancl Tenancy</strong>.",
+      "Architected Multi-Tenant with isolated databases using <strong>Stancl Tenancy</strong>.",
     job1_3: "Secured scalable REST APIs with <strong>Laravel Sanctum</strong>.",
     job1_4:
-      "Developed an <strong>Offline-First PWA</strong> with IndexedDB (Dexie.js) and intelligent synchronization.",
-    job1_5: "Implemented conflict control using idempotency keys.",
+      "Built an <strong>Offline-First PWA</strong> with IndexedDB (Dexie.js) and smart sync.",
+    job1_5: "Implemented conflict control with idempotency keys and a BCV price engine.",
     job1_6:
-      "Built an automated price engine based on the official BCV exchange rate.",
+      "Architected multi-branch / multi-warehouse with horizontal scaling. Live in production.",
     job1_7:
       "Architected for horizontal scaling, multi-branch, and multi-warehouse support. Platform live with commercial clients.",
-    job2Role: "Senior Full Stack & DevOps Developer",
+    job2Role: "Senior Full Stack & DevOps Engineer",
     job2Dates: "2024 – 2026",
     job2Company: "ViveTuJuego",
-    job2_1:
-      "Developed a SaaS platform for sports management, live streaming, and content monetization.",
-    job2_2: "Built <strong>Laravel 11</strong> Multi-Tenant architecture.",
+    job2Product: "SaaS for sports management, live streaming, and monetization",
+    job2_1: "Built <strong>Laravel 11</strong> Multi-Tenant architecture.",
+    job2_2:
+      "Integrated <strong>Amazon IVS</strong> and <strong>AWS MediaConvert</strong> for streaming and transcoding.",
     job2_3:
-      "Integrated <strong>Amazon IVS</strong> for live streaming and <strong>AWS MediaConvert</strong> for automated transcoding.",
-    job2_4:
-      "Managed media distribution with <strong>CloudFront</strong> and <strong>S3</strong>; payments via <strong>Stripe</strong>.",
+      "Media distribution with <strong>CloudFront</strong> / <strong>S3</strong>; payments via <strong>Stripe</strong>.",
+    job2_4: "Real-time scoreboards with <strong>Laravel Reverb</strong>.",
     job2_5:
-      "Implemented real-time scoreboards using <strong>Laravel Reverb</strong>.",
+      "Mobile app with <strong>React Native (Expo)</strong> and offline sync with <strong>SQLite</strong>.",
     job2_6:
       "Developed a mobile app with <strong>React Native (Expo)</strong> and offline sync with <strong>SQLite</strong>. Deployed to production.",
-    job3Role: "Senior Full Stack Developer",
+    job3Role: "Senior Full Stack Engineer",
     job3Dates: "2019 – 2023",
     job3Company: "CollegeOne LLC",
+    job3Product: "International educational platform",
     job3_1:
-      "Developed and maintained enterprise modules for an international educational platform.",
+      "Developed and maintained enterprise modules for the educational platform.",
     job3_2:
-      "Built Backend modules with <strong>Laravel</strong> and REST APIs; interactive dashboards with <strong>Vue.js</strong>.",
+      "Backend with <strong>Laravel</strong> and REST APIs; dashboards with <strong>Vue.js</strong>.",
     job3_3:
-      "Integrated external systems, internal social networks, and international payment gateways.",
+      "Integrated external systems, internal networks, and international payment gateways.",
     job3_4: "Remote collaboration with global teams.",
-    job4Role: "Senior Backend Developer",
+    job4Role: "Senior Backend Engineer",
     job4Dates: "2017 – 2019",
-    job4Company: "CONAPDIS (National Government Entity)",
+    job4Company: "CONAPDIS",
+    job4Product: "National government entity — disability management systems",
     job4_1:
-      "Optimized the national technological ecosystem for the management of persons with disabilities.",
+      "Migrated legacy systems to <strong>Laravel</strong> with a centralized API architecture.",
     job4_2:
-      "Migrated legacy systems to a modern <strong>Laravel</strong> stack with a centralized API architecture.",
+      "Optimized SQL for databases exceeding <strong>500,000 records</strong>.",
     job4_3:
-      "Optimized SQL queries for databases exceeding <strong>500,000 records</strong>.",
+      "Implemented Lazy Loading and advanced indexing with major performance gains.",
     job4_4:
       "Implemented Lazy Loading and advanced indexing strategies with major performance gains.",
-    job5Role: "Senior Backend Developer",
+    job5Role: "Senior Backend Engineer",
     job5Dates: "2015 – 2017",
     job5Company: "Centro Juvenil Don Bosco",
-    job5_1:
-      "Developed an attendance and event control system with full refactoring under <strong>SOLID</strong> principles.",
+    job5Product: "Attendance and event control system",
+    job5_1: "Full refactoring under <strong>SOLID</strong> principles.",
     job5_2:
-      "Built secure APIs with <strong>Laravel Sanctum</strong>; integrated <strong>NFC</strong> devices and mass <strong>QR</strong> tickets.",
-    job5_3: "Automated workloads via Jobs and Queues.",
+      "APIs with <strong>Laravel Sanctum</strong>; <strong>NFC</strong> devices and mass <strong>QR</strong> tickets.",
+    job5_3: "Workload automation via Jobs and Queues.",
     eduTitle: "Education & Certifications",
+    eduOnlyTitle: "Education",
     eduDegree:
       "Bachelor's Degree in Computer Science Administration (Licenciado en Administración — Mención Informática) · 2003 – 2008",
-    certsTitle: "Certifications",
+    certsTitle: "Certifications & courses",
     cert1:
       "<strong>IBM Advanced Career Education:</strong> Developer Applications e-Business",
     cert2:
-      "<strong>Styde (Specialized Training):</strong> Design Patterns with PHP · Eloquent ORM &amp; Optimization · Vue.js, Livewire &amp; WebSockets · Object-Oriented Programming · Testing with Vue.js &amp; Git",
+      "<strong>Styde:</strong> PHP Design Patterns · Eloquent ORM · Vue.js, Livewire &amp; WebSockets · OOP · Testing &amp; Git",
+    techTitle: "Core technologies",
+    focusTitle: "My focus",
+    focusText:
+      "Building scalable, maintainable software oriented to real business outcomes — from architecture to production.",
   },
 
   es: {
@@ -145,6 +178,7 @@ window.CV_I18N = {
     email: "eulemisalfredo@gmail.com",
     phone: "+58 412 016-9750",
     linkedin: "linkedin.com/in/eulemis-hernandez",
+    github: "github.com/eulemis",
     eduSchool: "Universidad Nacional Experimental Simón Rodríguez (UNESR)",
     photoAlt: "Foto de Eulemis Hernández",
     contact: "Contacto",
@@ -153,6 +187,22 @@ window.CV_I18N = {
     emailLabel: "Correo",
     phoneLabel: "Teléfono",
     linkedinLabel: "LinkedIn",
+    highlightsTitle: "Perfil destacado",
+    stat1Value: "10+",
+    stat1Label: "años de experiencia",
+    stat2Value: "5+",
+    stat2Label: "plataformas SaaS",
+    stat3Value: "500K+",
+    stat3Label: "registros optimizados",
+    stat4Value: "100%",
+    stat4Label: "enfoque en calidad",
+    keySkills: "Habilidades clave",
+    skill1: "Laravel / PHP",
+    skill2: "React / TypeScript",
+    skill3: "Arquitectura SaaS",
+    skill4: "Cloud / AWS",
+    skill5: "MySQL / Redis",
+    skill6: "DevOps / Docker",
     coreStack: "Stack principal",
     backend: "Backend",
     frontend: "Frontend",
@@ -182,81 +232,99 @@ window.CV_I18N = {
     strength11: "Liderazgo técnico",
     strength12: "Diseño de software escalable",
     languages: "Idiomas",
+    languageName: "Español",
+    languageLevel: "Nativo",
     languageValue: "Español — Nativo",
+    headlineShort: "Senior Software Engineer",
     headline:
       "Desarrollador Senior de Software · Arquitecto Backend · Especialista SaaS & Cloud",
-    profileTitle: "Perfil profesional",
+    rolesLine: "Backend Specialist · SaaS Architect · Cloud & DevOps · Full Stack",
+    profileTitle: "Resumen profesional",
     profile:
       "Desarrollador Senior de Software con más de 10 años de experiencia diseñando, desarrollando y desplegando soluciones escalables para empresas privadas, entidades de gobierno y plataformas SaaS. Especializado en arquitectura Backend con Laravel, aplicaciones Full Stack con React, infraestructura Cloud (AWS y DigitalOcean), sistemas Multi-Tenant, aplicaciones Offline-First y optimización de bases de datos de alto volumen. Trayectoria comprobada liderando proyectos desde la arquitectura hasta producción en comercio, educación, gobierno, deporte y automatización de negocios. Experto en Clean Architecture, alto rendimiento, escalabilidad y calidad de código.",
+    profileP1:
+      "Desarrollador Senior de Software con más de 10 años de experiencia diseñando, desarrollando y desplegando soluciones escalables para empresas privadas, entidades de gobierno y plataformas SaaS.",
+    profileP2:
+      "Especializado en arquitectura Backend con Laravel, aplicaciones Full Stack con React, infraestructura Cloud (AWS y DigitalOcean), sistemas Multi-Tenant, aplicaciones Offline-First y optimización de bases de datos de alto volumen. Experto en Clean Architecture, alto rendimiento, escalabilidad y calidad de código.",
     expTitle: "Experiencia profesional",
-    job1Role: "Cofundador y Desarrollador Senior de Software",
+    job1Role: "Cofundador y Desarrollador Senior",
     job1Dates: "2024 – Actualidad",
     job1Company: "Venta Simplify",
+    job1Product: "Plataforma SaaS Multi-Tenant de facturación, inventario y punto de venta",
     job1_1:
-      "Diseñé y desarrollé una plataforma SaaS Multi-Tenant de facturación, inventario y punto de venta orientada a PYMES.",
+      "Diseñé y desarrollé una plataforma SaaS Multi-Tenant orientada a PYMES.",
     job1_2:
-      "Arquitecturé un sistema Multi-Tenant con bases de datos aisladas usando <strong>Stancl Tenancy</strong>.",
+      "Arquitecturé Multi-Tenant con bases de datos aisladas usando <strong>Stancl Tenancy</strong>.",
     job1_3:
       "Aseguré APIs REST escalables con <strong>Laravel Sanctum</strong>.",
     job1_4:
       "Desarrollé una <strong>PWA Offline-First</strong> con IndexedDB (Dexie.js) y sincronización inteligente.",
     job1_5:
-      "Implementé control de conflictos con claves de idempotencia.",
+      "Implementé control de conflictos con claves de idempotencia y motor de precios BCV.",
     job1_6:
-      "Construí un motor de precios automatizado basado en la tasa oficial del BCV.",
+      "Arquitecturé multi-sucursal / multi-almacén con escalado horizontal. En producción.",
     job1_7:
       "Arquitecturé soporte multi-sucursal y multi-almacén con escalado horizontal. Plataforma en producción con clientes comerciales.",
     job2Role: "Desarrollador Senior Full Stack y DevOps",
     job2Dates: "2024 – 2026",
     job2Company: "ViveTuJuego",
+    job2Product: "SaaS de gestión deportiva, streaming en vivo y monetización",
     job2_1:
-      "Desarrollé una plataforma SaaS de gestión deportiva, streaming en vivo y monetización de contenido.",
-    job2_2:
       "Construí arquitectura Multi-Tenant con <strong>Laravel 11</strong>.",
+    job2_2:
+      "Integré <strong>Amazon IVS</strong> y <strong>AWS MediaConvert</strong> para streaming y transcodificación.",
     job2_3:
-      "Integré <strong>Amazon IVS</strong> para streaming en vivo y <strong>AWS MediaConvert</strong> para transcodificación automatizada.",
+      "Distribución con <strong>CloudFront</strong> / <strong>S3</strong>; pagos con <strong>Stripe</strong>.",
     job2_4:
-      "Gestioné distribución de medios con <strong>CloudFront</strong> y <strong>S3</strong>; pagos con <strong>Stripe</strong>.",
+      "Marcadores en tiempo real con <strong>Laravel Reverb</strong>.",
     job2_5:
-      "Implementé marcadores en tiempo real con <strong>Laravel Reverb</strong>.",
+      "App móvil con <strong>React Native (Expo)</strong> y sync offline con <strong>SQLite</strong>.",
     job2_6:
       "Desarrollé la app móvil con <strong>React Native (Expo)</strong> y sincronización offline con <strong>SQLite</strong>. Desplegado en producción.",
     job3Role: "Desarrollador Senior Full Stack",
     job3Dates: "2019 – 2023",
     job3Company: "CollegeOne LLC",
+    job3Product: "Plataforma educativa internacional",
     job3_1:
-      "Desarrollé y mantuve módulos empresariales para una plataforma educativa internacional.",
+      "Desarrollé y mantuve módulos empresariales para la plataforma educativa.",
     job3_2:
-      "Construí módulos Backend con <strong>Laravel</strong> y APIs REST; dashboards interactivos con <strong>Vue.js</strong>.",
+      "Backend con <strong>Laravel</strong> y APIs REST; dashboards con <strong>Vue.js</strong>.",
     job3_3:
-      "Integré sistemas externos, redes sociales internas y pasarelas de pago internacionales.",
+      "Integré sistemas externos, redes internas y pasarelas de pago internacionales.",
     job3_4: "Colaboración remota con equipos globales.",
     job4Role: "Desarrollador Senior Backend",
     job4Dates: "2017 – 2019",
-    job4Company: "CONAPDIS (Ente del Gobierno Nacional)",
+    job4Company: "CONAPDIS",
+    job4Product: "Ente del Gobierno Nacional — gestión de personas con discapacidad",
     job4_1:
-      "Optimicé el ecosistema tecnológico nacional para la gestión de personas con discapacidad.",
+      "Migré sistemas legacy a <strong>Laravel</strong> con arquitectura de API centralizada.",
     job4_2:
-      "Migré sistemas legacy a un stack moderno con <strong>Laravel</strong> y arquitectura de API centralizada.",
+      "Optimicé SQL en bases de datos con más de <strong>500.000 registros</strong>.",
     job4_3:
-      "Optimicé consultas SQL en bases de datos con más de <strong>500.000 registros</strong>.",
+      "Implementé Lazy Loading e indexación avanzada con mejoras de rendimiento.",
     job4_4:
       "Implementé Lazy Loading e indexación avanzada con mejoras significativas de rendimiento.",
     job5Role: "Desarrollador Senior Backend",
     job5Dates: "2015 – 2017",
     job5Company: "Centro Juvenil Don Bosco",
+    job5Product: "Sistema de control de asistencia y eventos",
     job5_1:
-      "Desarrollé un sistema de control de asistencia y eventos con refactorización completa bajo principios <strong>SOLID</strong>.",
+      "Refactorización completa bajo principios <strong>SOLID</strong>.",
     job5_2:
-      "Construí APIs seguras con <strong>Laravel Sanctum</strong>; integré dispositivos <strong>NFC</strong> y boletos <strong>QR</strong> masivos.",
-    job5_3: "Automaticé cargas de trabajo con Jobs y Queues.",
+      "APIs con <strong>Laravel Sanctum</strong>; integración <strong>NFC</strong> y boletos <strong>QR</strong>.",
+    job5_3: "Automatización de cargas con Jobs y Queues.",
     eduTitle: "Educación y certificaciones",
+    eduOnlyTitle: "Educación",
     eduDegree:
       "Licenciado en Administración — Mención Informática · 2003 – 2008",
-    certsTitle: "Certificaciones",
+    certsTitle: "Certificaciones y cursos",
     cert1:
       "<strong>IBM Advanced Career Education:</strong> Developer Applications e-Business",
     cert2:
-      "<strong>Styde (formación especializada):</strong> Patrones de diseño con PHP · Eloquent ORM y optimización · Vue.js, Livewire y WebSockets · Programación orientada a objetos · Testing con Vue.js y Git",
+      "<strong>Styde:</strong> Patrones de diseño PHP · Eloquent ORM · Vue.js, Livewire y WebSockets · OOP · Testing y Git",
+    techTitle: "Tecnologías principales",
+    focusTitle: "Mi enfoque",
+    focusText:
+      "Construir software escalable, mantenible y orientado a resultados reales de negocio — desde la arquitectura hasta producción.",
   },
 };

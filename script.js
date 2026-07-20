@@ -89,9 +89,9 @@
   }
 
   /**
-   * Clon continuo del CV (como en pantalla).
-   * Compacta un poco el sidebar para que Fortalezas/Idiomas quepan en la 1ª hoja
-   * y no se corten a la mitad — sin repetir el sidebar.
+   * Clon continuo del CV (mismo layout que en pantalla).
+   * No fuerza page-break-inside:avoid en bloques grandes:
+   * eso era lo que generaba páginas casi vacías.
    */
   function buildVisualClone() {
     const clone = cv.cloneNode(true);
@@ -102,18 +102,6 @@
     clone.style.margin = "0";
     clone.style.boxShadow = "none";
     clone.style.borderRadius = "0";
-
-    // Fortalezas más compactas → caben en página 1 con el sidebar
-    const chips = clone.querySelector(".chip-list");
-    if (chips) {
-      chips.classList.add("chip-list--compact");
-    }
-
-    clone.querySelectorAll(".job, .edu, .sidebar-block, .section").forEach((el) => {
-      el.style.breakInside = "avoid";
-      el.style.pageBreakInside = "avoid";
-    });
-
     return clone;
   }
 
@@ -150,7 +138,7 @@
     await new Promise((r) => setTimeout(r, 200));
 
     const opt = {
-      margin: [8, 8, 8, 8],
+      margin: [5, 5, 5, 5],
       filename,
       image: { type: "jpeg", quality: 0.98 },
       enableLinks: false,
@@ -165,7 +153,8 @@
         scrollY: 0,
       },
       jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-      pagebreak: { mode: ["avoid-all", "css", "legacy"] },
+      /* Sin avoid-all: evita saltos con hojas casi en blanco */
+      pagebreak: { mode: ["css", "legacy"] },
     };
 
     await html2pdf().set(opt).from(element).save();
@@ -210,12 +199,14 @@
 
     const headline = document.createElement("p");
     headline.className = "ats-headline";
-    headline.textContent = d.headline;
+    headline.textContent = d.headlineShort || d.headline;
     root.appendChild(headline);
 
     const contact = document.createElement("p");
     contact.className = "ats-contact";
-    contact.textContent = [d.location, d.email, d.phone, d.linkedin].join("  |  ");
+    contact.textContent = [d.location, d.email, d.phone, d.linkedin, d.github]
+      .filter(Boolean)
+      .join("  |  ");
     root.appendChild(contact);
 
     function addSection(title, bodyEl) {
@@ -249,25 +240,25 @@
         role: "job1Role",
         dates: "job1Dates",
         company: "job1Company",
-        bullets: ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6", "job1_7"],
+        bullets: ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6"],
       },
       {
         role: "job2Role",
         dates: "job2Dates",
         company: "job2Company",
-        bullets: ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5", "job2_6"],
+        bullets: ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5"],
       },
       {
         role: "job3Role",
         dates: "job3Dates",
         company: "job3Company",
-        bullets: ["job3_1", "job3_2", "job3_3", "job3_4"],
+        bullets: ["job3_1", "job3_2", "job3_3"],
       },
       {
         role: "job4Role",
         dates: "job4Dates",
         company: "job4Company",
-        bullets: ["job4_1", "job4_2", "job4_3", "job4_4"],
+        bullets: ["job4_1", "job4_2", "job4_3"],
       },
       {
         role: "job5Role",
@@ -337,8 +328,8 @@
     const blank = () => lines.push("");
 
     push("EULEMIS HERNANDEZ");
-    push(d.headline);
-    push([d.location, d.email, d.phone, d.linkedin].join(" | "));
+    push(d.headlineShort || d.headline);
+    push([d.location, d.email, d.phone, d.linkedin, d.github].filter(Boolean).join(" | "));
     blank();
     push(d.profileTitle.toUpperCase());
     push(d.profile);
@@ -353,10 +344,10 @@
     push(d.expTitle.toUpperCase());
 
     const jobs = [
-      ["job1Role", "job1Dates", "job1Company", ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6", "job1_7"]],
-      ["job2Role", "job2Dates", "job2Company", ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5", "job2_6"]],
-      ["job3Role", "job3Dates", "job3Company", ["job3_1", "job3_2", "job3_3", "job3_4"]],
-      ["job4Role", "job4Dates", "job4Company", ["job4_1", "job4_2", "job4_3", "job4_4"]],
+      ["job1Role", "job1Dates", "job1Company", ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6"]],
+      ["job2Role", "job2Dates", "job2Company", ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5"]],
+      ["job3Role", "job3Dates", "job3Company", ["job3_1", "job3_2", "job3_3"]],
+      ["job4Role", "job4Dates", "job4Company", ["job4_1", "job4_2", "job4_3"]],
       ["job5Role", "job5Dates", "job5Company", ["job5_1", "job5_2", "job5_3"]],
     ];
 
