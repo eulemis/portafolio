@@ -238,31 +238,26 @@
     const jobs = [
       {
         role: "job1Role",
-        dates: "job1Dates",
         company: "job1Company",
         bullets: ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6", "job1_7"],
       },
       {
         role: "job2Role",
-        dates: "job2Dates",
         company: "job2Company",
         bullets: ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5", "job2_6"],
       },
       {
         role: "job3Role",
-        dates: "job3Dates",
         company: "job3Company",
         bullets: ["job3_1", "job3_2", "job3_3", "job3_4"],
       },
       {
         role: "job4Role",
-        dates: "job4Dates",
         company: "job4Company",
         bullets: ["job4_1", "job4_2", "job4_3", "job4_4"],
       },
       {
         role: "job5Role",
-        dates: "job5Dates",
         company: "job5Company",
         bullets: ["job5_1", "job5_2", "job5_3"],
       },
@@ -272,7 +267,7 @@
       const block = document.createElement("div");
       block.className = "ats-job";
       const title = document.createElement("h3");
-      title.textContent = d[job.role] + "  |  " + d[job.dates];
+      title.textContent = d[job.role];
       block.appendChild(title);
       const company = document.createElement("p");
       company.className = "ats-company";
@@ -344,15 +339,15 @@
     push(d.expTitle.toUpperCase());
 
     const jobs = [
-      ["job1Role", "job1Dates", "job1Company", ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6", "job1_7"]],
-      ["job2Role", "job2Dates", "job2Company", ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5", "job2_6"]],
-      ["job3Role", "job3Dates", "job3Company", ["job3_1", "job3_2", "job3_3", "job3_4"]],
-      ["job4Role", "job4Dates", "job4Company", ["job4_1", "job4_2", "job4_3", "job4_4"]],
-      ["job5Role", "job5Dates", "job5Company", ["job5_1", "job5_2", "job5_3"]],
+      ["job1Role", "job1Company", ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6", "job1_7"]],
+      ["job2Role", "job2Company", ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5", "job2_6"]],
+      ["job3Role", "job3Company", ["job3_1", "job3_2", "job3_3", "job3_4"]],
+      ["job4Role", "job4Company", ["job4_1", "job4_2", "job4_3", "job4_4"]],
+      ["job5Role", "job5Company", ["job5_1", "job5_2", "job5_3"]],
     ];
 
-    jobs.forEach(([role, dates, company, bullets]) => {
-      push(d[role] + " | " + d[dates]);
+    jobs.forEach(([role, company, bullets]) => {
+      push(d[role]);
       push(d[company]);
       bullets.forEach((k) => push("- " + stripHtml(d[k])));
       blank();
