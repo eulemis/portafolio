@@ -240,25 +240,25 @@
         role: "job1Role",
         dates: "job1Dates",
         company: "job1Company",
-        bullets: ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6"],
+        bullets: ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6", "job1_7"],
       },
       {
         role: "job2Role",
         dates: "job2Dates",
         company: "job2Company",
-        bullets: ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5"],
+        bullets: ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5", "job2_6"],
       },
       {
         role: "job3Role",
         dates: "job3Dates",
         company: "job3Company",
-        bullets: ["job3_1", "job3_2", "job3_3"],
+        bullets: ["job3_1", "job3_2", "job3_3", "job3_4"],
       },
       {
         role: "job4Role",
         dates: "job4Dates",
         company: "job4Company",
-        bullets: ["job4_1", "job4_2", "job4_3"],
+        bullets: ["job4_1", "job4_2", "job4_3", "job4_4"],
       },
       {
         role: "job5Role",
@@ -344,10 +344,10 @@
     push(d.expTitle.toUpperCase());
 
     const jobs = [
-      ["job1Role", "job1Dates", "job1Company", ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6"]],
-      ["job2Role", "job2Dates", "job2Company", ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5"]],
-      ["job3Role", "job3Dates", "job3Company", ["job3_1", "job3_2", "job3_3"]],
-      ["job4Role", "job4Dates", "job4Company", ["job4_1", "job4_2", "job4_3"]],
+      ["job1Role", "job1Dates", "job1Company", ["job1_1", "job1_2", "job1_3", "job1_4", "job1_5", "job1_6", "job1_7"]],
+      ["job2Role", "job2Dates", "job2Company", ["job2_1", "job2_2", "job2_3", "job2_4", "job2_5", "job2_6"]],
+      ["job3Role", "job3Dates", "job3Company", ["job3_1", "job3_2", "job3_3", "job3_4"]],
+      ["job4Role", "job4Dates", "job4Company", ["job4_1", "job4_2", "job4_3", "job4_4"]],
       ["job5Role", "job5Dates", "job5Company", ["job5_1", "job5_2", "job5_3"]],
     ];
 
