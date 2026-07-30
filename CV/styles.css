@@ -525,9 +525,8 @@ body {
 .job {
   position: relative;
   margin-bottom: 0.65rem;
-  /* Permitir corte entre jobs: evita huecos blancos en PDF */
-  break-inside: auto;
-  page-break-inside: auto;
+  break-inside: avoid;
+  page-break-inside: avoid;
 }
 
 .job:last-child {
@@ -865,20 +864,25 @@ body {
     text-decoration: none !important;
   }
 
-  /* No forzar bloques enteros a la siguiente página (evita huecos) */
+  /* Mantener cada experiencia junta; mejor un hueco pequeño que un título cortado */
   .job,
   .edu,
-  .section,
-  .focus-box,
-  .sidebar-block {
-    break-inside: auto;
-    page-break-inside: auto;
+  .certs {
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 
   .job__head,
   .section-title {
     break-after: avoid;
     page-break-after: avoid;
+  }
+
+  .section,
+  .focus-box,
+  .sidebar-block {
+    break-inside: auto;
+    page-break-inside: auto;
   }
 
   .profile-text {
@@ -936,6 +940,26 @@ body {
 
 .cv--pdf-capture .job {
   margin-bottom: 0.55rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.cv--pdf-capture .job__head,
+.cv--pdf-capture .section-title,
+.cv--pdf-capture .edu,
+.cv--pdf-capture .certs {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.cv--pdf-capture .job li,
+.cv--pdf-capture .profile-text {
+  overflow-wrap: break-word;
+  word-break: normal;
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 .pdf-stage {

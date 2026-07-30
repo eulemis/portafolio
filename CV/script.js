@@ -132,13 +132,59 @@
     if (stage && stage.parentNode) stage.parentNode.removeChild(stage);
   }
 
-  async function exportElementToPdf(element, filename) {
+  /**
+   * Empuja bloques (.job, .edu) a la página siguiente si quedarían cortados.
+   * html2pdf renderiza un canvas continuo y lo parte por altura de A4;
+   * page-break CSS no evita bien el corte a mitad de un título.
+   */
+  function pushBlocksToNextPage(root, pageHeightPx) {
+    const selectors = ".job, .edu, .certs";
+    const blocks = Array.from(root.querySelectorAll(selectors));
+    if (!blocks.length || pageHeightPx <= 0) return;
+
+    const rootRect = () => root.getBoundingClientRect();
+
+    blocks.forEach((block) => {
+      const top = block.getBoundingClientRect().top - rootRect().top;
+      const height = block.offsetHeight;
+      if (height <= 0 || height >= pageHeightPx * 0.95) return;
+
+      const posInPage = ((top % pageHeightPx) + pageHeightPx) % pageHeightPx;
+      /* margen de seguridad: evita cortar la última línea por redondeo del canvas */
+      const safety = 12;
+      const overflow = posInPage + height + safety - pageHeightPx;
+      if (overflow <= 0) return;
+
+      const pad = pageHeightPx - posInPage;
+      const prev = parseFloat(window.getComputedStyle(block).marginTop) || 0;
+      block.style.marginTop = prev + pad + "px";
+    });
+  }
+
+  function a4PageHeightPx(elementWidthPx, marginMm) {
+    const [mt, , mb] = marginMm;
+    const ml = marginMm[1];
+    const mr = marginMm[3];
+    const usableH = 297 - mt - mb;
+    const usableW = 210 - ml - mr;
+    return (usableH * elementWidthPx) / usableW;
+  }
+
+  async function exportElementToPdf(element, filename, options = {}) {
     requireHtml2Pdf();
     await waitFonts();
     await new Promise((r) => setTimeout(r, 200));
 
+    const margin = [5, 5, 5, 5];
+    const widthPx = element.offsetWidth || 794;
+
+    if (options.keepJobsTogether !== false) {
+      pushBlocksToNextPage(element, a4PageHeightPx(widthPx, margin));
+      await new Promise((r) => requestAnimationFrame(r));
+    }
+
     const opt = {
-      margin: [5, 5, 5, 5],
+      margin,
       filename,
       image: { type: "jpeg", quality: 0.98 },
       enableLinks: false,
@@ -153,8 +199,10 @@
         scrollY: 0,
       },
       jsPDF: { unit: "mm", format: "a4", orientation: "portrait" },
-      /* Sin avoid-all: evita saltos con hojas casi en blanco */
-      pagebreak: { mode: ["css", "legacy"] },
+      pagebreak: {
+        mode: ["css", "legacy"],
+        avoid: [".job", ".edu", ".certs", ".job__head", ".section-title"],
+      },
     };
 
     await html2pdf().set(opt).from(element).save();
